@@ -15,7 +15,7 @@ kuulutuste_arv <- read_html(kuulutuste_url) %>%
     html_text() %>%
     as.numeric()
 
-# genereeri kuulutuste lingid (20 kuulutust per lehekülg)
+# genereeri kuulutuste lingid (200 kuulutust per lehekülg)
 kuulutuste_lingid <- str_c("http://eng.auto24.ee/kasutatud/nimekiri.php?bn=2&a=101102&ae=2&af=200&ag=0&otsi=otsi&ak=",
                            seq(from = 0, to = kuulutuste_arv, by = 200))
 
